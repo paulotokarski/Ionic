@@ -14,19 +14,17 @@
 <h2>
     <strong>Screenshots</strong>
 </h2>
-<center>
-    <figure>
-        <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765991.png" height="330px" width="auto" alt="Screenshot da página About do aplicativo.">
-        <figcaption>Screenshot da página About do aplicativo.</figcaption>
-    </figure>
-    <figure>
-        <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765981.png" height="330px" width="auto" alt="Screenshot da página Home do aplicativo.">
-        <figcaption>Screenshot da página Home do aplicativo.</figcaption>
-    </figure>
-    <figure>
-        <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765998.png" height="330px" width="auto" alt="Screenshot da página Contact do aplicativo.">
-        <figcaption>Screenshot da página Contact do aplicativo.</figcaption>
-    </figure>
-    </center>
+<figure>
+    <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765991.png" height="330px" width="auto" alt="Screenshot da página About do aplicativo.">
+    <figcaption>Screenshot da página About do aplicativo.</figcaption>
+</figure>
+<figure>
+    <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765981.png" height="330px" width="auto" alt="Screenshot da página Home do aplicativo.">
+    <figcaption>Screenshot da página Home do aplicativo.</figcaption>
+</figure>
+<figure>
+    <img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765998.png" height="330px" width="auto" alt="Screenshot da página Contact do aplicativo.">
+    <figcaption>Screenshot da página Contact do aplicativo.</figcaption>
+</figure>
 <br><br>
 <p>por: paulotokarski</p>
