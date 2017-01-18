@@ -14,8 +14,8 @@
 <h2>
     <strong>Screenshots</strong>
 </h2>
-<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765981.png" alt="Screenshot da página Home do aplicativo.">
-<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765991.png" alt="Screenshot da página About do aplicativo.">
-<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765998.png" alt="Screenshot da página Contact do aplicativo.">
+<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765981.png" heigth="230px" width="auto" alt="Screenshot da página Home do aplicativo.">
+<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765991.png" heigth="230px" width="auto" alt="Screenshot da página About do aplicativo.">
+<img src="https://github.com/paulotokarski/Ionic/blob/master/httpApp/screenshots/Screenshot_1484765998.png" heigth="230px" width="auto" alt="Screenshot da página Contact do aplicativo.">
 <br><br>
 <p>por: paulotokarski</p>
