@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="app">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let user of users" (click)="openPage(user)">
+    <ion-card-header>
+      <strong>@{{user.username}}</strong>
+    </ion-card-header>
+    <ion-card-content>
+      {{user.name}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

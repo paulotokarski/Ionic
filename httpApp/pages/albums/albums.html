@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="app">
+    <ion-title>{{user.username}}'s Albums</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let album of albums" (click)="openPhotos(album.id, user)">
+    <ion-card-header>
+      <strong>{{album.title}}</strong>
+    </ion-card-header>
+    <ion-card-content>
+      @{{user.username}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

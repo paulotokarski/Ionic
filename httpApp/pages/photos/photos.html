@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="app">
+    <ion-title>{{user.username}}'s Photos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let photo of photos" (click)="showPhoto(photo)">
+      <ion-thumbnail item-left>
+        <img [src]="photo.thumbnailUrl">
+      </ion-thumbnail>
+      <h2>{{photo.title}}</h2>
+      <p>@{{user.username}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
