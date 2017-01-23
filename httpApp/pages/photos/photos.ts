@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { ModalController, NavController, NavParams } from 'ionic-angular';
-
 import { PhotoPage } from '../photo/photo'; 
-import { ApiService } from '../../services/ApiService';
-
 import { UserModel } from '../../models/User';
+import { PhotoModel } from '../../models/Photo';
+import { ApiService } from '../../services/ApiService';
+import { ModalController, NavController, NavParams } from 'ionic-angular';
 
 @Component({
     templateUrl: 'photos.html',
@@ -12,9 +11,9 @@ import { UserModel } from '../../models/User';
 })
 export class PhotosPage {
 
-  private albumId: any;
+  private albumId: number;
   private user: UserModel;
-  private photos: any = [];
+  private photos: PhotoModel[] = [];
 
   constructor(public modalCtrl: ModalController ,  public navCtrl: NavController, public navParams: NavParams, public apiService: ApiService) {
     this.user = new UserModel();
@@ -26,16 +25,25 @@ export class PhotosPage {
     this.getAlbumPhotos(this.albumId);
   }
 
-  getAlbumPhotos(id: any) {
+  getAlbumPhotos(id: number) {
     this.apiService.getUserAlbumPhotos(id)
         .then(photos => {
-            this.photos = photos
+          for(var cont = 0; cont < photos.length; cont++)
+            this.photos.push(photos[cont])
         })
   }
 
-  showPhoto(photo) {
+  openPhoto(photo) {
     let modal = this.modalCtrl.create(PhotoPage, { 'photo': photo });
-    modal.present();
+    modal.present()
+  }
+
+  doRefresh(refresher) {
+    setTimeout(() => {
+      this.photos = [];
+      this.getAlbumPhotos(this.albumId);
+      refresher.complete();
+    }, 2000);
   }
 
 }

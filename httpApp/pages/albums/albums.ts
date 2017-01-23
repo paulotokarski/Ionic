@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
 import { PhotosPage } from '../photos/photos';
-import { ApiService } from '../../services/ApiService';
-
 import { UserModel } from '../../models/User';
+import { AlbumModel } from '../../models/Album';
+import { ApiService } from '../../services/ApiService';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
     templateUrl: 'albums.html',
     providers: [ApiService]
 })
+
 export class AlbumsPage {
 
   private user: UserModel;
-  private albums: any;
+  private albums: AlbumModel[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public apiService: ApiService) {
       this.user = new UserModel();
@@ -27,11 +27,21 @@ export class AlbumsPage {
   getAlbums(id: number) {
     this.apiService.getUserAlbums(id)
         .then(albums => {
-            this.albums = albums
+          for(var cont = 0; cont < albums.length; cont++)
+            this.albums.push(albums[cont])
         })
   }
 
   openPhotos(id: any, user: UserModel) {
     this.navCtrl.push(PhotosPage, { 'albumId': id, 'user': user });
   }
+
+  doRefresh(refresher) {
+    setTimeout(() => {
+      this.albums = [];
+      this.getAlbums(this.user.getId());
+      refresher.complete();
+    }, 2000);
+  }
+  
 }
